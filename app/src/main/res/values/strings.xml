@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MSE Starter</string>
+
+    <!-- Main -->
+    <string name="name_label">Full Name:</string>
+    <string name="student_id_label">Student ID:</string>
+    <string name="btn_start_explicit">Start Activity Explicitly</string>
+    <string name="btn_start_implicit">Start Activity Implicitly</string>
+
+    <!-- Second -->
+    <string name="challenges_header">Mobile Software Engineering Challenges</string>
+    <string name="challenge_battery">• Battery &amp; power constraints</string>
+    <string name="challenge_performance">• Performance on limited hardware</string>
+    <string name="challenge_network">• Network variability &amp; offline handling</string>
+    <string name="challenge_fragmentation">• Fragmentation (devices, OS versions)</string>
+    <string name="challenge_security">• Security &amp; privacy issues</string>
+    <string name="btn_main">Main Activity</string>
+
+    <!-- Personalized values shown on MainActivity -->
+    <string name="full_name_value">Full Name: Leonard Dunor</string>
+    <string name="student_id_value">Student ID: 1168722</string>
+</resources>
