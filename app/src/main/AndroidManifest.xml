@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.msestarter">
 
+    <!-- 1. Custom dangerous permission -->
+    <permission
+        android:name="com.example.msestarter.MSE412"
+        android:protectionLevel="dangerous" />
+
+    <!-- 2. The app declares it uses the permission -->
+    <uses-permission android:name="com.example.msestarter.MSE412" />
+
+    <!-- Your existing permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
 
@@ -24,15 +33,19 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- 3. Exported SecondActivity protected by custom permission -->
         <activity
             android:name=".SecondActivity"
-            android:exported="true">
+            android:exported="true"
+            android:permission="com.example.msestarter.MSE412">
+
             <intent-filter>
                 <action android:name="com.example.msestarter.SHOW_CHALLENGES" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
+        <!-- Main activity → requests permission before launching SecondActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -46,4 +59,5 @@
             android:name=".ThirdActivity"
             android:exported="false" />
     </application>
+
 </manifest>
